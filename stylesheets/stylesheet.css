@@ -48,6 +48,7 @@ table {
 
 
 
+
 * {
   box-sizing: border-box;
   font-family: 'Bungee Shade', cursive;
@@ -70,6 +71,7 @@ li {
   padding: 10px 10px;
   list-style-type: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 ul {
@@ -80,8 +82,12 @@ ul {
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
-    height: 60px;
+  height: 60px;
 }
 
 .page-titles {
@@ -102,4 +108,22 @@ h2.title {
 
 .hover-border {
   border: solid 3px white;
+  box-sizing: border-box;
+}
+
+.current-page {
+  border-bottom: solid 3px white;
+  padding-bottom: 5px;
+}
+
+.contact-info {
+  font-size: 30px;
+  /*font-family: 'Amatic SC', cursive;*/
+/*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Exo', sans-serif;
+/*font-family: 'Courgette', cursive;*/
+}
+
+body.contact a.contact {
+  color: yellow;
 }
