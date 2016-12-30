@@ -52,7 +52,7 @@ table {
 * {
   box-sizing: border-box;
   font-family: 'Bungee Shade', cursive;
-  color: white;
+  color: #efe3cd;
   background-color: black;
   /*font-family: 'Oleo Script', cursive;*/
   /*font-family: 'Molle', cursive;*/
@@ -99,20 +99,21 @@ header {
 
 h1.name {
   font-size: 40px;
+  padding-bottom: 25px;
 }
 
 h2.title {
   font-size: 40px;
-  padding: 35px;
+  padding: 20px;
 }
 
 .hover-border {
-  border: solid 3px white;
+  border: solid 3px #efe3cd;
   box-sizing: border-box;
 }
 
 .current-page {
-  border-bottom: solid 3px white;
+  border-bottom: solid 3px #efe3cd;
   padding-bottom: 5px;
 }
 
@@ -122,8 +123,5 @@ h2.title {
 /*font-family: 'Quicksand', sans-serif;*/
   font-family: 'Exo', sans-serif;
 /*font-family: 'Courgette', cursive;*/
-}
-
-body.contact a.contact {
-  color: yellow;
+  padding: 5px;
 }
