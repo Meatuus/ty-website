@@ -1,11 +1,18 @@
 $(document).ready(function(){
   $('.nav-bar').mouseover(function(){
-    $(this).addClass("hover-border");
+    if (this.innerText + '.html' === window.location.href.split("/")[7]) {
+      console.log('it worked!!');
+    } else {
+      $(this).addClass("hover-border");
+
+    }
+    // console.log(window.location.href.split("/")[7]);
+    // look up possible method hasClass? to see if we can check if self has class of 'current-page' instead
   });
   $('.nav-bar').mouseout(function(){
     $(this).removeClass("hover-border");
+    console.log(this.innerText + '.html');
   });
-
 });
 
 $('header').ready(function() {
@@ -21,3 +28,48 @@ $('header').ready(function() {
   else
     $(".contact").addClass("current-page");
 });
+
+
+
+var heart = (document).getElementsByClassName('heart')[0],
+    pfx = ["webkit", "moz", "MS", "o", ""],
+    hovered = false;
+function AnimationListener() {
+    if(hovered)
+    {
+      heart.classList.remove('animated');
+      heart.style.webkitTransform = 'scale(1.5)';
+      heart.style.MozTransform = 'scale(1.5)';
+      heart.style.msTransform = 'scale(1.5)';
+      heart.style.OTransform = 'scale(1.5)';
+      heart.style.transform = 'scale(1.5)';
+    }
+}
+
+function TransitionListener() {
+  $(heart).mouseout(function(){
+    $(this).addClass("animated");
+  });
+}
+
+function PrefixedEvent(element, type, callback) {
+    for (var p = 0; p < pfx.length; p++) {
+        if (!pfx[p]) type = type.toLowerCase();
+        element.addEventListener(pfx[p]+type, callback, false);
+    }
+}
+
+PrefixedEvent(heart, "AnimationIteration", AnimationListener);
+
+heart.onmouseover = function() {
+  hovered = true;
+}
+heart.onmouseout = function() {
+  setTimeout(function() { hovered = false; }, 500);
+  PrefixedEvent(heart, "TransitionEnd", TransitionListener);
+  heart.style.webkitTransform = 'scale(1)';
+  heart.style.MozTransform = 'scale(1)';
+  heart.style.msTransform = 'scale(1)';
+  heart.style.OTransform = 'scale(1)';
+  heart.style.transform = 'scale(1)';
+}
