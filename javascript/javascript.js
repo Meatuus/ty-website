@@ -1,22 +1,23 @@
 $(document).ready(function(){
   $('.nav-bar').mouseover(function(){
-    if (this.innerText + '.html' === window.location.href.split("/")[7]) {
-      console.log('it worked!!');
+    if ($(this).hasClass('current-page') == true) {
+      // console.log('it worked!!');
     } else {
       $(this).addClass("hover-border");
-
+// console.log(this);
     }
     // console.log(window.location.href.split("/")[7]);
     // look up possible method hasClass? to see if we can check if self has class of 'current-page' instead
   });
   $('.nav-bar').mouseout(function(){
     $(this).removeClass("hover-border");
-    console.log(this.innerText + '.html');
+    // console.log(this.innerText + '.html');
   });
 });
 
+var page = window.location.href.split("/")[7]; // after the slash at the end of the domain name
+
 $('header').ready(function() {
-  var page = window.location.href.split("/")[7]; // after the slash at the end of the domain name
   if (page === "index.html")
     $(".index").addClass("current-page");
   else if (page === "portfolio.html")
@@ -30,46 +31,48 @@ $('header').ready(function() {
 });
 
 
+if (page === "index.html") {
+  var heart = (document).getElementsByClassName('heart')[0],
+      pfx = ["webkit", "moz", "MS", "o", ""],
+      hovered = false;
+  function AnimationListener() {
+      if(hovered)
+      {
+        heart.classList.remove('animated');
+        heart.style.webkitTransform = 'scale(1.5)';
+        heart.style.MozTransform = 'scale(1.5)';
+        heart.style.msTransform = 'scale(1.5)';
+        heart.style.OTransform = 'scale(1.5)';
+        heart.style.transform = 'scale(1.5)';
+      }
+  }
 
-var heart = (document).getElementsByClassName('heart')[0],
-    pfx = ["webkit", "moz", "MS", "o", ""],
-    hovered = false;
-function AnimationListener() {
-    if(hovered)
-    {
-      heart.classList.remove('animated');
-      heart.style.webkitTransform = 'scale(1.5)';
-      heart.style.MozTransform = 'scale(1.5)';
-      heart.style.msTransform = 'scale(1.5)';
-      heart.style.OTransform = 'scale(1.5)';
-      heart.style.transform = 'scale(1.5)';
-    }
-}
+  function TransitionListener() {
+    if(!hovered)
+      {
+        heart.classList.add('animated');
+      }
+  }
 
-function TransitionListener() {
-  $(heart).mouseout(function(){
-    $(this).addClass("animated");
-  });
-}
+  function PrefixedEvent(element, type, callback) {
+      for (var p = 0; p < pfx.length; p++) {
+          if (!pfx[p]) type = type.toLowerCase();
+          element.addEventListener(pfx[p]+type, callback, false);
+      }
+  }
 
-function PrefixedEvent(element, type, callback) {
-    for (var p = 0; p < pfx.length; p++) {
-        if (!pfx[p]) type = type.toLowerCase();
-        element.addEventListener(pfx[p]+type, callback, false);
-    }
-}
+  PrefixedEvent(heart, "AnimationIteration", AnimationListener);
 
-PrefixedEvent(heart, "AnimationIteration", AnimationListener);
-
-heart.onmouseover = function() {
-  hovered = true;
-}
-heart.onmouseout = function() {
-  setTimeout(function() { hovered = false; }, 500);
-  PrefixedEvent(heart, "TransitionEnd", TransitionListener);
-  heart.style.webkitTransform = 'scale(1)';
-  heart.style.MozTransform = 'scale(1)';
-  heart.style.msTransform = 'scale(1)';
-  heart.style.OTransform = 'scale(1)';
-  heart.style.transform = 'scale(1)';
+  heart.onmouseover = function() {
+    hovered = true;
+  }
+  heart.onmouseout = function() {
+    setTimeout(function() { hovered = false; }, 500);
+    PrefixedEvent(heart, "TransitionEnd", TransitionListener);
+    heart.style.webkitTransform = 'scale(1)';
+    heart.style.MozTransform = 'scale(1)';
+    heart.style.msTransform = 'scale(1)';
+    heart.style.OTransform = 'scale(1)';
+    heart.style.transform = 'scale(1)';
+  }
 }
