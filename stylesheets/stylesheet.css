@@ -91,8 +91,9 @@ header {
 }
 
 .page-titles {
-  position: relative;
-  top: 200px;
+  display: block;
+  padding-top: 200px;
+  padding-bottom: 200px;
   width: 100%;
   text-align: center;
 }
@@ -110,11 +111,17 @@ h2.title {
 .hover-border {
   border: solid 3px #efe3cd;
   box-sizing: border-box;
+  padding: 7px;
+  /*transition: width .5s ease,background-color .5s ease;
+    transition-property: width, background-color;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease, ease;
+    transition-delay: initial, initial;*/
 }
 
 .current-page {
   border-bottom: solid 3px #efe3cd;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .contact-info {
@@ -124,4 +131,33 @@ h2.title {
   font-family: 'Exo', sans-serif;
 /*font-family: 'Courgette', cursive;*/
   padding: 5px;
+}
+
+main.about-container {
+  width: 60%;
+  box-sizing: border-box;
+  float: left;
+  padding: 25px;
+}
+
+.about-par {
+  font-family: 'Exo', sans-serif;
+}
+
+p.skills-par {
+    font-size: 20px;
+    display: inline;
+    font-family: 'Exo', sans-serif;
+}
+
+section.skills-container {
+  width: 35%;
+  box-sizing: border-box;
+  float: right;
+}
+
+i {
+  width: 50%;
+  float: left;
+  font-size: 45px;
 }
