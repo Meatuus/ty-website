@@ -9,31 +9,32 @@
     <script src="https://use.fontawesome.com/2fd75991c7.js"></script>
   </head>
   <body>
+    <div class="top_container section">
 
-    <header>
-      <h1 class="initials">T / S</h1>
-      <ul>
-        <li class="nav-bar contact"><a href="contact.html" class="">contact</a></li>
-        <li class="nav-bar about"><a href="about.html" class="">about</a></li>
-        <li class="nav-bar resume"><a target="_blank" href="Tyler-Smith-Resume.pdf">resume</a></li>
-        <li class="nav-bar portfolio"><a href="portfolio.html" class="">portfolio</a></li>
-        <li class="nav-bar index"><a href="index.html" class="">home</a></li>
-      </ul>
-    </header>
+      <header>
+        <h1 class="initials">T / S</h1>
+        <ul>
+          <li class="nav-bar contact"><a href="contact.html" class="">contact</a></li>
+          <li class="nav-bar about"><a href="#about-section-container" class="">about</a></li>
+          <li class="nav-bar resume"><a target="_blank" href="Tyler-Smith-Resume.pdf">resume</a></li>
+          <li class="nav-bar portfolio"><a href="portfolio.html" class="">portfolio</a></li>
+          <li class="nav-bar index"><a href="index.html" class="">home</a></li>
+        </ul>
+      </header>
 
-    <main>
       <div class="page-titles">
         <h1 class="name">Tyler Smith</h1>
         <h2 class="title">Web Developer.</h2>
       </div>
 
-      <p>email me</p>
-      <a href="mailto:tcameronsmith@gmail.com">tcameronsmith@gmail.com</a>
+      <div class='heart animated'></div>
+    </div>
 
-      <h3>With Javascript</h3>
-      <div class='heart animated'><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
-      <!-- <h3>Pure CSS</h3> -->
+      <!-- <div class="arrow animated bounce">
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+      </div> -->
       <!-- <div class='heart animated css'></div> -->
+    <div class="middle_container section" id="about-section-container">
 
       <div class="about-container">
         <p class="about-par">My name is Tyler Smith, I’m a full stack web developer as well as a former project manager and building automation technician with over 8 years experience seeing projects through to an end. I have a strong passion in new technology and solving problems. Combining these two passions has led me to a career in web development. I enjoy working as part of a team to solve problems that directly affect the real world across both the back and front end.</p><br>
@@ -42,6 +43,15 @@
         <p class="about-par">Prior to Bitmaker/General Assembly, I graduated a Bachelor of Arts, Majoring in Psychology at Brock University in 2009.</p><br>
         <p class="about-par">As a naturally inquisitive person, I am always looking to learn something new.</p><br>
       </div>
+
+      <div class="contact-email">
+        <p>email me</p>
+        <a href="mailto:tcameronsmith@gmail.com">tcameronsmith@gmail.com</a>
+      </div>
+
+    </div>
+
+    <div class="botton_container section" id="skills-container">
 
       <section class="skills-container">
         <h3>Skills</h3>
@@ -58,7 +68,8 @@
         <i class="devicon-mysql-plain"><p class="skills-par">MySQL</p></i>
         <i class="devicon-heroku-original"><p class="skills-par">Heroku</p></i>
       </section>
-    </main>
+
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/javascript.js"></script>
