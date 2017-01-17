@@ -57,6 +57,10 @@ table {
   /*font-family: 'Oleo Script', cursive;*/
   /*font-family: 'Molle', cursive;*/
 }
+body {
+  overflow: hidden;
+  line-height: 1.5;
+}
 
 header h1 {
   float: left;
@@ -93,10 +97,14 @@ header {
 
 .page-titles {
   display: block;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 20%;
+  padding-bottom: 20%;
   width: 100%;
   text-align: center;
+}
+
+.section {
+    height: 100%;
 }
 
 h1.name {
@@ -135,6 +143,10 @@ h2.title {
   padding: 5px;
 }
 
+.middle_container {
+  padding: 2% 20px;
+  background-color: brown;
+}
 main.about-container {
   width: 60%;
   box-sizing: border-box;
@@ -144,6 +156,26 @@ main.about-container {
 
 .about-par {
   font-family: 'Exo', sans-serif;
+}
+p.about-par {
+    padding: 10px 20px;
+}
+
+.contact-email {
+    width: 375px;
+    margin: auto;
+    /*margin-bottom: 30px;*/
+}
+
+.contact-email p {
+    padding: 10px 0px;
+    font-size: 15px;
+}
+
+.contact-email a {
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+    font-size: 20px;
 }
 
 p.skills-par {
@@ -155,7 +187,7 @@ p.skills-par {
 section.skills-container {
   width: 35%;
   box-sizing: border-box;
-  float: right;
+  /*float: right;*/
 }
 
 i {
@@ -173,7 +205,8 @@ i {
 
 .heart {
   position: relative;
-  left: 47%;
+  left: 46%;
+  bottom: 20px;
   width: 100px;
   height: 90px;
   margin: 30px;
@@ -197,11 +230,11 @@ i {
   animation-dely:1s;
 }
 .heart.animated {
-  -webkit-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -moz-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -ms-animation: 1600ms pulsate infinite alternate ease-in-out;
-  -o-animation: 1600ms pulsate infinite alternate ease-in-out;
-  animation: 1600ms pulsate infinite alternate ease-in-out;
+  -webkit-animation: 2000ms bounce infinite ease-in-out;
+  -moz-animation: 2000ms bounce infinite ease-in-out;
+  -ms-animation: 2000ms bounce infinite ease-in-out;
+  -o-animation: 2000ms bounce infinite ease-in-out;
+  animation: 2000ms bounce infinite ease-in-out;
 }
 .heart:before,
 .heart:after {
@@ -211,7 +244,7 @@ i {
   top: 0;
   width: 10px;
   height: 50px;
-  background: red;
+  background: #efe3cd;
   -moz-border-radius: 50px 50px 0 0;
   border-radius: 50px 50px 0 0;
   -webkit-transform: rotate(-45deg);
@@ -275,4 +308,62 @@ i {
   0% { -o-transform: scale(1); }
   50% { -o-transform: scale(1.05); }
   100% { -o-transform: scale(1); }
+}
+
+
+body {
+  background: black;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left:-20px;
+}
+/*
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+  -moz-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  -o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+  animation-fill-mode:both;
+  -webkit-animation-duration:2s;
+  -moz-animation-duration:2s;
+  -ms-animation-duration:2s;
+  -o-animation-duration:2s;
+  animation-duration:2s;
+}*/
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
