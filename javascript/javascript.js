@@ -38,12 +38,13 @@ if (page === "index.html") {
   function AnimationListener() {
       if(hovered)
       {
-        heart.classList.remove('animated');
-        heart.style.webkitTransform = 'scale(1.5)';
-        heart.style.MozTransform = 'scale(1.5)';
-        heart.style.msTransform = 'scale(1.5)';
-        heart.style.OTransform = 'scale(1.5)';
-        heart.style.transform = 'scale(1.5)';
+        console.log('hovered');
+        // heart.classList.remove('animated');
+        // heart.style.webkitTransform = 'scale(1.5)';
+        // heart.style.MozTransform = 'scale(1.5)';
+        // heart.style.msTransform = 'scale(1.5)';
+        // heart.style.OTransform = 'scale(1.5)';
+        // heart.style.transform = 'scale(1.5)';
       }
   }
 
