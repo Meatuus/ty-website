@@ -106,17 +106,18 @@ header {
 
 .section {
     height: 100vh;
+    /*position: relative;*/
 }
 
 .top-container {
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   justify-content: center;
-  background-color: darkgreen;
+  /*background-color: darkgreen;*/
   font-size: 3rem;
   position: relative;
   z-index: 10;
-  height: 100px;
+  /*height: 100px;*/
 }
 
 h1.name {
@@ -215,7 +216,7 @@ i {
 
 
 
-.heart {
+.arrow {
   position: absolute;;
   left: 46%;
   bottom: 20px;
@@ -234,22 +235,22 @@ i {
   -o-transform-origin: center center;
   transition: all 1s;
 }
-.heart.css {
+.arrow.css {
   -webkit-animation-delay:1s;
   -moz-animation-delay:1s;
   -ms-animation-delay:1s;
   -o-animation-delay:1s;
   animation-dely:1s;
 }
-.heart.animated {
+.arrow.animated {
   -webkit-animation: 2000ms bounce infinite ease-in-out;
   -moz-animation: 2000ms bounce infinite ease-in-out;
   -ms-animation: 2000ms bounce infinite ease-in-out;
   -o-animation: 2000ms bounce infinite ease-in-out;
   animation: 2000ms bounce infinite ease-in-out;
 }
-.heart:before,
-.heart:after {
+.arrow:before,
+.arrow:after {
   position: absolute;
   content: "";
   left: 10px;
@@ -270,7 +271,7 @@ i {
        -o-transform-origin: 0 100%;
           transform-origin: 0 100%;
 }
-.heart:after {
+.arrow:after {
   left: 0;
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
@@ -283,7 +284,7 @@ i {
        -o-transform-origin: 100% 100%;
           transform-origin :100% 100%;
 }
-/*.heart.css:hover {
+/*.arrow.css:hover {
   -webkit-transform: scale(2);
   -moz-transform: scale(2);
   -ms-transform: scale(2);
@@ -325,12 +326,12 @@ i {
 
 
 
-.arrow {
+/*.arrow {
   position: fixed;
   bottom: 0;
   left: 50%;
   margin-left:-20px;
-}
+}*/
 /*
 .bounce {
 	-webkit-animation-name: bounce;

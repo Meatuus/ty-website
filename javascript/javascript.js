@@ -32,26 +32,26 @@ $('header').ready(function() {
 
 
 if (page === "index.html") {
-  var heart = (document).getElementsByClassName('heart')[0],
+  var arrow = (document).getElementsByClassName('arrow')[0],
       pfx = ["webkit", "moz", "MS", "o", ""],
       hovered = false;
   function AnimationListener() {
       if(hovered)
       {
         console.log('hovered');
-        // heart.classList.remove('animated');
-        // heart.style.webkitTransform = 'scale(1.5)';
-        // heart.style.MozTransform = 'scale(1.5)';
-        // heart.style.msTransform = 'scale(1.5)';
-        // heart.style.OTransform = 'scale(1.5)';
-        // heart.style.transform = 'scale(1.5)';
+        // arrow.classList.remove('animated');
+        // arrow.style.webkitTransform = 'scale(1.5)';
+        // arrow.style.MozTransform = 'scale(1.5)';
+        // arrow.style.msTransform = 'scale(1.5)';
+        // arrow.style.OTransform = 'scale(1.5)';
+        // arrow.style.transform = 'scale(1.5)';
       }
   }
 
   function TransitionListener() {
     if(!hovered)
       {
-        heart.classList.add('animated');
+        arrow.classList.add('animated');
       }
   }
 
@@ -62,18 +62,18 @@ if (page === "index.html") {
       }
   }
 
-  PrefixedEvent(heart, "AnimationIteration", AnimationListener);
+  PrefixedEvent(arrow, "AnimationIteration", AnimationListener);
 
-  heart.onmouseover = function() {
+  arrow.onmouseover = function() {
     hovered = true;
   }
-  heart.onmouseout = function() {
+  arrow.onmouseout = function() {
     setTimeout(function() { hovered = false; }, 500);
-    PrefixedEvent(heart, "TransitionEnd", TransitionListener);
-    heart.style.webkitTransform = 'scale(1)';
-    heart.style.MozTransform = 'scale(1)';
-    heart.style.msTransform = 'scale(1)';
-    heart.style.OTransform = 'scale(1)';
-    heart.style.transform = 'scale(1)';
+    PrefixedEvent(arrow, "TransitionEnd", TransitionListener);
+    arrow.style.webkitTransform = 'scale(1)';
+    arrow.style.MozTransform = 'scale(1)';
+    arrow.style.msTransform = 'scale(1)';
+    arrow.style.OTransform = 'scale(1)';
+    arrow.style.transform = 'scale(1)';
   }
 }
