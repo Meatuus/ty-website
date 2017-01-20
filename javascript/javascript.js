@@ -1,17 +1,19 @@
 $(document).ready(function(){
   $('.nav-bar').mouseover(function(){
     if ($(this).hasClass('current-page') == true) {
-      // console.log('it worked!!');
     } else {
       $(this).addClass("hover-border");
-// console.log(this);
     }
-    // console.log(window.location.href.split("/")[7]);
     // look up possible method hasClass? to see if we can check if self has class of 'current-page' instead
   });
   $('.nav-bar').mouseout(function(){
     $(this).removeClass("hover-border");
-    // console.log(this.innerText + '.html');
+  });
+  $('.email').mouseover(function() {
+    $(this).addClass("hover-border");
+  });
+  $('.email').mouseout(function() {
+    $(this).removeClass("hover-border");
   });
 });
 
