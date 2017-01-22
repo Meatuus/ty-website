@@ -15,6 +15,10 @@ $(document).ready(function(){
   $('.email').mouseout(function() {
     $(this).removeClass("hover-border");
   });
+
+  $('.arrow').on('click', function() {
+    window.location.href = '#about-section-container'
+  });
 });
 
 var page = window.location.href.split("/")[7]; // after the slash at the end of the domain name
@@ -31,6 +35,7 @@ $('header').ready(function() {
   else
     $(".contact").addClass("current-page");
 });
+
 
 
 if (page === "index.html") {

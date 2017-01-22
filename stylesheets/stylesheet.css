@@ -252,6 +252,7 @@ i {
 
 
 .arrow {
+  cursor: pointer;
   position: absolute;;
   left: 46%;
   bottom: 20px;
