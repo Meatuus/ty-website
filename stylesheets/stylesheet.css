@@ -73,7 +73,7 @@ header h1 {
 
 li {
   float: right;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 0px 10px 0px;
   margin: 0px 10px;
   list-style-type: none;
   cursor: pointer;
@@ -506,6 +506,7 @@ i {
 
 .resume_container h1 {
   font-size: 30px;
+  text-align: center;
 }
 .resume_container h1, .resume_container h2, .resume_container h3, .resume_container h4,
 .res_par, .resume_container li {
@@ -554,7 +555,20 @@ ul.skills-list {
 
 .resume-pdf {
     text-align: center;
+    position: relative;
     width: 800px;
     margin: auto;
     font-size: 18px;
+}
+i.fa.fa-print {
+    float: none;
+    position: fixed;
+    left: 25px;
+    top: 200px;
+    font-size: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.resume-pdf a {
+    position: relative;
 }
