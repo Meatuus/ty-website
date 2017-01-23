@@ -572,3 +572,17 @@ i.fa.fa-print {
 .resume-pdf a {
     position: relative;
 }
+.contact_info_container h2, .contact_info_container a {
+  font-family: 'Exo';
+  float: left;
+  padding: 10px 7px;
+}
+
+.contact_info_container {
+    overflow: hidden;
+}
+
+.contact_info_container h2:nth-child(1) {
+    height: 70px;
+    padding-top: 20px;
+}
