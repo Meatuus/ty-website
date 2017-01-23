@@ -586,3 +586,38 @@ i.fa.fa-print {
     height: 70px;
     padding-top: 20px;
 }
+
+/*=================== Portfolio page ==================*/
+
+.portfolio_title h1 {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.project_container h2, .project_container p, .project_container a {
+  font-family: 'Exo';
+}
+section.portfolio_container {
+    width: 1000px;
+    margin: auto;
+}
+
+.project_container h2 {
+    font-size: 25px;
+    padding: 10px 0px;
+}
+
+.project_container p {
+    padding: 10px 0px;
+}
+
+.project_container a {
+    cursor: pointer;
+    color: rgb(33, 150, 243);
+}
+img {
+    width: 100%;
+    border: 7px solid rgba(255, 255, 255, 0.59);
+    margin-bottom: 30px;
+}
