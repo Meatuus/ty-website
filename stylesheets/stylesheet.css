@@ -73,7 +73,7 @@ header h1 {
 
 li {
   float: right;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 5px 10px 5px;
   margin: 0px 10px;
   list-style-type: none;
   cursor: pointer;
@@ -132,8 +132,10 @@ h2.title {
 .hover-border {
   border: solid 3px #efe3cd;
   box-sizing: border-box;
-  padding: 7px;
-  margin: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
   /*transition: width .5s ease,background-color .5s ease;
     transition-property: width, background-color;
     transition-duration: 0.5s, 0.5s;
@@ -492,4 +494,67 @@ i {
 .contact-info a {
   font-family: 'exo';
   border-bottom: 2px solid;
+}
+
+
+
+/*==================Resume Page ====================*/
+.section.resume_container {
+  width: 1000px;
+  margin: auto;
+}
+
+.resume_container h1 {
+  font-size: 30px;
+}
+.resume_container h1, .resume_container h2, .resume_container h3, .resume_container h4,
+.res_par, .resume_container li {
+  font-family: 'Exo', sans-serif;
+}
+.skills-list li {
+    display: inline;
+    padding: 0px 10px;
+    color: #2196F3;
+    float: none;
+    cursor: auto;
+}
+
+ul.skills-list {
+    text-align: center;
+    padding: 10px;
+    float: none;
+    width: 100%;
+    font-size: 15px;
+}
+
+.resume_container h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+.resume_container h3 {
+    color: rgb(100, 166, 219);
+}
+
+.resume_container h4 {
+    padding: 10px 0px;
+    color: rgb(221, 107, 107);
+}
+
+.skills a {
+  font-family: 'Exo';
+  float: right;
+  cursor: pointer;
+}
+
+.skills {
+    font-style: italic;
+}
+
+.resume-pdf {
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
 }
