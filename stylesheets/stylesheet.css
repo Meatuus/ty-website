@@ -51,11 +51,11 @@ table {
 
 * {
   box-sizing: border-box;
-  font-family: 'Bungee Shade', cursive;
   color: #efe3cd;
   background-color: black;
-  /*font-family: 'Oleo Script', cursive;*/
-  /*font-family: 'Molle', cursive;*/
+  font-family: 'Sigmar One', cursive;
+      /*font-family: 'Oleo Script', cursive;*/
+      /*font-family: 'Molle', cursive;*/
 }
 body {
   overflow: auto;
@@ -122,15 +122,13 @@ header {
 }
 
 h1.name {
-  font-size: 40px;
-  padding-bottom: 25px;
+  font-size: 80px;
+  /*padding-bottom: 25px;*/
 }
-
 h2.title {
   font-size: 40px;
-  padding: 20px;
+  padding: 10px;
 }
-
 .hover-border {
   border: solid 3px #efe3cd;
   box-sizing: border-box;
@@ -159,7 +157,7 @@ h2.title {
 
 .middle_container {
   padding: 2% 20px;
-  background-color: #312e2e;
+  background-color: #e87d57;
   border-top: 3px solid white;
   border-bottom: 3px solid white;
 }
@@ -169,15 +167,19 @@ h2.title {
   float: left;
   padding: 25px;
 }
+.about-par, .about-par a, .contact-email p, .contact-email a {
+  color: black;
+}
 .about-container, .about-par a, .contact-email, .contact-email p, .contact-email a {
-  background-color: #312e2e;
+  background-color: #e87d57;
 }
 .about-par {
   font-family: 'Exo', sans-serif;
-  background-color: #312e2e;
+  background-color: #e87d57;
+  font-size: 18px;
 }
 p.about-par {
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .contact-email {
@@ -281,20 +283,20 @@ i {
   animation-dely:1s;
 }
 .arrow.animated {
-  -webkit-animation: 2000ms bounce infinite ease-in-out;
-  -moz-animation: 2000ms bounce infinite ease-in-out;
-  -ms-animation: 2000ms bounce infinite ease-in-out;
-  -o-animation: 2000ms bounce infinite ease-in-out;
-  animation: 2000ms bounce infinite ease-in-out;
+  -webkit-animation: 3000ms bounce infinite ease-in-out;
+  -moz-animation: 3000ms bounce infinite ease-in-out;
+  -ms-animation: 3000ms bounce infinite ease-in-out;
+  -o-animation: 3000ms bounce infinite ease-in-out;
+  animation: 3000ms bounce infinite ease-in-out;
 }
 .arrow:before,
 .arrow:after {
   position: absolute;
   content: "";
-  left: 10px;
+  left: 5px;
   top: 0;
-  width: 10px;
-  height: 50px;
+  width: 5px;
+  height: 35px;
   background: #efe3cd;
   -moz-border-radius: 50px 50px 0 0;
   border-radius: 50px 50px 0 0;
@@ -369,7 +371,7 @@ i {
   height: 75px;
   right: 75px;
   background-image: -webkit-linear-gradient(top left, transparent 50%, #236fa1 50%);
-  background-image: linear-gradient(315deg, #e04b4b 50%, transparent 50%);
+  background-image: linear-gradient(315deg, #bb5d3f 50%, transparent 50%);
 }
 
 /*.arrow {
@@ -478,4 +480,16 @@ i {
   font-family: 'Exo', sans-serif;
   top: 20px;
   text-align: center;
+}
+
+
+/*=============== Contact page =================*/
+.contact_title {
+  font-size: 40px;
+  border-bottom: 2px solid;
+  margin-bottom: 30px;
+}
+.contact-info a {
+  font-family: 'exo';
+  border-bottom: 2px solid;
 }

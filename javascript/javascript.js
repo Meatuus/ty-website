@@ -16,8 +16,11 @@ $(document).ready(function(){
     $(this).removeClass("hover-border");
   });
 
-  $('.arrow').on('click', function() {
+  $('.top_arrow').on('click', function() {
     window.location.href = '#about-section-container'
+  });
+  $('.middle_arrow').on('click', function() {
+    window.location.href = '#skills-container'
   });
 });
 
